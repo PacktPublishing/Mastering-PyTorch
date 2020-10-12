@@ -18,7 +18,6 @@ int main(int argc, char **argv) {
     std::vector<torch::jit::IValue> inputs;
     inputs.push_back(input);
     auto output_ = module.forward(inputs).toTensor();
-    cout << output_ << '\n';
     auto output = output_.argmax(1);
     cout << output << '\n';
     return 0;
