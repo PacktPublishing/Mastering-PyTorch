@@ -40,7 +40,7 @@ class ConvNet(nn.Module):
      
 
 def train(cpu_num, args):
-    rank = args.rank * args.num_processes + cpu_num                        
+    rank = args.machine_id * args.num_processes + cpu_num                        
     dist.init_process_group(                                   
     backend='gloo',                                         
     init_method='env://',                                   
@@ -87,7 +87,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--num-machines', default=1, type=int,)
     parser.add_argument('--num-processes', default=1, type=int)
-    parser.add_argument('--rank', default=0, type=int)
+    parser.add_argument('--machine-id', default=0, type=int)
     parser.add_argument('--epochs', default=1, type=int)
     parser.add_argument('--num-batches', default=128, type=int)
     args = parser.parse_args()
