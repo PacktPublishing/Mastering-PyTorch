@@ -63,7 +63,6 @@ def train(cpu_num, args):
        batch_size=args.batch_size,
        shuffle=False,            
        num_workers=0,
-       pin_memory=True,
        sampler=train_sampler)
     model = ConvNet()
     optimizer = optim.Adadelta(model.parameters(), lr=0.5)
