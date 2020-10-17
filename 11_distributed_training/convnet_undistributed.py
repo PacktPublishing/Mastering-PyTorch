@@ -50,9 +50,9 @@ def train(args):
     for epoch in range(args.epochs):
         for b_i, (X, y) in enumerate(train_dataloader):
             X, y = X.to(device), y.to(device)
-            optimizer.zero_grad()
             pred_prob = model(X)
             loss = F.nll_loss(pred_prob, y) # nll is the negative likelihood loss
+            optimizer.zero_grad()
             loss.backward()
             optimizer.step()
             if b_i % 10 == 0:

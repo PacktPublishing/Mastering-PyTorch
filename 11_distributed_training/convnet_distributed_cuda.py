@@ -39,16 +39,19 @@ class ConvNet(nn.Module):
         return op
      
 
-def train(cpu_num, args):
+def train(gpu_num, args):
     rank = args.machine_id * args.num_processes + cpu_num                        
     dist.init_process_group(                                   
-    backend='gloo',                                         
+    backend='nccl',                                         
     init_method='env://',                                   
     world_size=args.world_size,                              
     rank=rank                                               
     ) 
     torch.manual_seed(0)
-    device = torch.device("cpu")
+    model = ConvNet()
+    torch.cuda.set_device(gpu_num)
+    model.cuda(gpu_num)
+    criterion = nn.NLLLoss().cuda(gpu_num) # nll is the negative likelihood loss
     train_dataset = datasets.MNIST('../data', train=True, download=True,
                                    transform=transforms.Compose([
                                        transforms.ToTensor(),
@@ -65,15 +68,15 @@ def train(cpu_num, args):
        num_workers=0,
        pin_memory=True,
        sampler=train_sampler)
-    model = ConvNet()
     optimizer = optim.Adadelta(model.parameters(), lr=0.5)
-    model = nn.parallel.DistributedDataParallel(model)
+    model = nn.parallel.DistributedDataParallel(model,
+                                                device_ids=[gpu_num])
     model.train()
     for epoch in range(args.epochs):
         for b_i, (X, y) in enumerate(train_dataloader):
-            X, y = X.to(device), y.to(device)
+            X, y = X.cuda(non_blocking=True), y.cuda(non_blocking=True)
             pred_prob = model(X)
-            loss = F.nll_loss(pred_prob, y) # nll is the negative likelihood loss
+            loss = criterion(pred_prob, y) 
             optimizer.zero_grad()
             loss.backward()
             optimizer.step()
@@ -86,17 +89,17 @@ def train(cpu_num, args):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--num-machines', default=1, type=int,)
-    parser.add_argument('--num-processes', default=1, type=int)
+    parser.add_argument('--num-gpu-processes', default=1, type=int)
     parser.add_argument('--machine-id', default=0, type=int)
     parser.add_argument('--epochs', default=1, type=int)
     parser.add_argument('--batch-size', default=128, type=int)
     args = parser.parse_args()
     
-    args.world_size = args.num_processes * args.num_machines                
+    args.world_size = args.num_gpu_processes * args.num_machines                
     os.environ['MASTER_ADDR'] = '127.0.0.1'              
     os.environ['MASTER_PORT'] = '8892'      
     start = time.time()
-    mp.spawn(train, nprocs=args.num_processes, args=(args,))
+    mp.spawn(train, nprocs=args.num_gpu_processes, args=(args,))
     print(f"Finished training in {time.time()-start} secs")
     
 if __name__ == '__main__':
