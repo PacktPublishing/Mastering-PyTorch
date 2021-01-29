@@ -1,8 +1,8 @@
 # Mastering PyTorch
 
-<a href="Packt UTM URL of the Book"><img src="Cover Image URL of the Book" alt="Book Name" height="256px" align="right"></a>
+<a href="https://www.packtpub.com/product/Mastering-PyTorch/9781789614381"><img src="https://static.packt-cdn.com/products/9781789614381/cover/smaller" alt="Mastering PyTorch" height="256px" align="right"></a>
 
-This is the code repository for [Book Name](Packt UTM URL of the Book), published by Packt.
+This is the code repository for [Mastering PyTorch](https://www.packtpub.com/product/Mastering-PyTorch/9781789614381), published by Packt.
 
 **Build powerful neural network architectures using advanced PyTorch 1.x features**
 
@@ -27,10 +27,9 @@ All of the code is organized into folders. For example, Chapter02.
 
 The code will look like the following:
 ```
-if (test expression)
-{
-  Statement upon condition is true
-}
+# define the optimization schedule for both G and D
+opt_gen = torch.optim.Adam(gen.parameters(), lr=lrate)
+opt_disc = torch.optim.Adam(disc.parameters(), lr=lrate)
 ```
 
 **Following is what you need for this book:**
@@ -42,30 +41,19 @@ With the following software and hardware list you can run all code files present
 
 | Chapter  | Software required                   | OS required                        |
 | -------- | ------------------------------------| -----------------------------------|
-| 1        | R version 3.3.0                     | Windows, Mac OS X, and Linux (Any) |
-| 2        | Rstudio Desktop 0.99.903            | Windows, Mac OS X, and Linux (Any) |
-| 3        | Rstudio Desktop 0.99.903            | Windows, Mac OS X, and Linux (Any) |
-| 4        | Rstudio Desktop 0.99.903            | Windows, Mac OS X, and Linux (Any) |
-| 5        | Rstudio Desktop 0.99.903            | Windows, Mac OS X, and Linux (Any) |
-| 6        | Rstudio Desktop 0.99.903            | Windows, Mac OS X, and Linux (Any) |
-| 7        | Rstudio Desktop 0.99.903            | Windows, Mac OS X, and Linux (Any) |
-| 8        | Rstudio Desktop 0.99.903            | Windows, Mac OS X, and Linux (Any) |
-| 9        | Rstudio Desktop 0.99.903            | Windows, Mac OS X, and Linux (Any) |
-| 10        | Rstudio Desktop 0.99.903            | Windows, Mac OS X, and Linux (Any) |
-| 11        | Rstudio Desktop 0.99.903            | Windows, Mac OS X, and Linux (Any) |
-| 12        | Rstudio Desktop 0.99.903            | Windows, Mac OS X, and Linux (Any) |
-| 13        | Rstudio Desktop 0.99.903            | Windows, Mac OS X, and Linux (Any) |
-| 14        | Rstudio Desktop 0.99.903            | Windows, Mac OS X, and Linux (Any) |
-| 15        | Rstudio Desktop 0.99.903            | Windows, Mac OS X, and Linux (Any) |
+| 1        | Jupyter Notebook                    | Windows, Mac OS X, and Linux (Any) |
+| 2        | Prebrably an NVIDIA GPU, but this is not mandatory          | Windows, Mac OS X, and Linux (Any) |
+| 3        | Python and PyTorch             | Windows, Mac OS X, and Linux (Any) |
+| 4        | AWS, Google cloud Platform and Azure account            | Windows, Mac OS X, and Linux (Any) |
 
 
 We also provide a PDF file that has color images of the screenshots/diagrams used in this book. [Click here to download it](https://static.packt-cdn.com/downloads/9781789614381_ColorImages.pdf).
 
 
 ### Related products <Other books you may enjoy>
-* Linux: Powerful Server Administration [[Packt]](https://www.packtpub.com/networking-and-servers/linux-powerful-server-administration?utm_source=github&utm_medium=repository&utm_campaign=9781788293778) [[Amazon]](https://www.amazon.com/dp/1788293770)
+* PyTorch 1.x Reinforcement Learning [[Packt]](https://www.packtpub.com/product/pytorch-1-x-reinforcement-learning-cookbook/9781838551964) [[Amazon]](https://www.amazon.com/dp/1838551964)
 
-* Linux Device Drivers Development [[Packt]](https://www.packtpub.com/networking-and-servers/linux-device-drivers-development?utm_source=github&utm_medium=repository&utm_campaign=9781785280009) [[Amazon]](https://www.amazon.com/dp/1788293770)
+* Hands-On Natural Language Processing with PyTorch 1.x [[Packt]](https://www.packtpub.com/product/hands-on-natural-language-processing-with-pytorch-1-x/9781789802740) [[Amazon]](https://www.amazon.com/dp/1788293770)
 
 ## Get to Know the Author(s
 **Ashish Ranjan Jha**
