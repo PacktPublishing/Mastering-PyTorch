@@ -53,7 +53,7 @@ We also provide a PDF file that has color images of the screenshots/diagrams use
 ### Related products <Other books you may enjoy>
 * PyTorch 1.x Reinforcement Learning [[Packt]](https://www.packtpub.com/product/pytorch-1-x-reinforcement-learning-cookbook/9781838551964) [[Amazon]](https://www.amazon.com/dp/1838551964)
 
-* Hands-On Natural Language Processing with PyTorch 1.x [[Packt]](https://www.packtpub.com/product/hands-on-natural-language-processing-with-pytorch-1-x/9781789802740) [[Amazon]](https://www.amazon.com/dp/1788293770)
+* Hands-On Natural Language Processing with PyTorch 1.x [[Packt]](https://www.packtpub.com/product/hands-on-natural-language-processing-with-pytorch-1-x/9781789802740) [[Amazon]](https://www.amazon.com/dp/1789802741)
 
 ## Get to Know the Author(s
 **Ashish Ranjan Jha**
