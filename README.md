@@ -55,7 +55,7 @@ We also provide a PDF file that has color images of the screenshots/diagrams use
 
 * Hands-On Natural Language Processing with PyTorch 1.x [[Packt]](https://www.packtpub.com/product/hands-on-natural-language-processing-with-pytorch-1-x/9781789802740) [[Amazon]](https://www.amazon.com/dp/1789802741)
 
-## Get to Know the Author(s
+## Get to Know the Author
 **Ashish Ranjan Jha**
 received his bachelor’s degree in electrical engineering from IIT Roorkee (India), his master’s degree in computer science from EPFL (Switzerland), and an MBA degree from the Quantic School of Business (Washington). He received distinctions in all of his degrees. He has worked for a variety of tech companies, including Oracle and Sony, and tech start-ups, such as Revolut, as a machine learning engineer.
 Aside from his years of work experience, Ashish is a freelance ML consultant, an author, and a blogger (datashines). He has worked on products/projects ranging from using sensor data for predicting vehicle types to detecting fraud in insurance claims. In his spare time, Ashish works on open source ML projects and is active on StackOverflow and kaggle (arj7192).
