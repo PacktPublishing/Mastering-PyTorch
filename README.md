@@ -59,6 +59,3 @@ We also provide a PDF file that has color images of the screenshots/diagrams use
 **Ashish Ranjan Jha**
 received his bachelor’s degree in electrical engineering from IIT Roorkee (India), his master’s degree in computer science from EPFL (Switzerland), and an MBA degree from the Quantic School of Business (Washington). He received distinctions in all of his degrees. He has worked for a variety of tech companies, including Oracle and Sony, and tech start-ups, such as Revolut, as a machine learning engineer.
 Aside from his years of work experience, Ashish is a freelance ML consultant, an author, and a blogger (datashines). He has worked on products/projects ranging from using sensor data for predicting vehicle types to detecting fraud in insurance claims. In his spare time, Ashish works on open source ML projects and is active on StackOverflow and kaggle (arj7192).
-
-### Suggestions and Feedback
-[Click here](https://docs.google.com/forms/d/e/1FAIpQLSdy7dATC6QmEL81FIUuymZ0Wy9vH1jHkvpY57OiMeKGqib_Ow/viewform) if you have any feedback or suggestions.
