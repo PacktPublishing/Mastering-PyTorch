@@ -59,3 +59,7 @@ We also provide a PDF file that has color images of the screenshots/diagrams use
 **Ashish Ranjan Jha**
 received his bachelor’s degree in electrical engineering from IIT Roorkee (India), his master’s degree in computer science from EPFL (Switzerland), and an MBA degree from the Quantic School of Business (Washington). He received distinctions in all of his degrees. He has worked for a variety of tech companies, including Oracle and Sony, and tech start-ups, such as Revolut, as a machine learning engineer.
 Aside from his years of work experience, Ashish is a freelance ML consultant, an author, and a blogger (datashines). He has worked on products/projects ranging from using sensor data for predicting vehicle types to detecting fraud in insurance claims. In his spare time, Ashish works on open source ML projects and is active on StackOverflow and kaggle (arj7192).
+### Download a free PDF
+
+ <i>If you have already purchased a print or Kindle version of this book, you can get a DRM-free PDF version at no cost.<br>Simply click on the link to claim your free PDF.</i>
+<p align="center"> <a href="https://packt.link/free-ebook/9781789614381">https://packt.link/free-ebook/9781789614381 </a> </p>
